@@ -1,6 +1,5 @@
-
- 
-const UserProfile = function (props) {
+import PropTypes from 'prop-types';
+export default function UserProfile (props) {
     const {avatar, username, tag, location, stats: {followers, views, likes}} = props;
   return (
     <div class="profile">
@@ -33,5 +32,13 @@ const UserProfile = function (props) {
   );
 };
 
-export default UserProfile;
+UserProfile.propTypes = {
+  avatar: PropTypes.string, 
+  username: PropTypes.string, 
+  tag: PropTypes.string, 
+  location: PropTypes.string, 
+  stats: PropTypes.objectOf(PropTypes.number),
+};
+
+
 

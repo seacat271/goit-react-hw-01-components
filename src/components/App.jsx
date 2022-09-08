@@ -1,7 +1,7 @@
-import UserProfile from "../components/User-profile";
-import dataUser from "../user.json";
-
-
+import UserProfile from "./User/User-profile";
+import Statistics from "./Statistics/Statistics";
+import dataUser from "../components/User/user.json";
+import data from "../components/Statistics/data.json";
 
 export const App = () => {
   return (
@@ -12,7 +12,11 @@ export const App = () => {
         location={dataUser.location}
         avatar={dataUser.avatar}
         stats={dataUser.stats}
-      />
+      />;
+      <Statistics 
+        title="Upload stats" 
+        stats={data} 
+      />;
     </div>
   );
 };
