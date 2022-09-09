@@ -1,7 +1,7 @@
 
 
 export default function FriendListItem (props) {
-    const {avatar, name, isOnline} = props
+    const {avatar, name} = props
     return (
     <li class="item">
         <span class="status"></span>
