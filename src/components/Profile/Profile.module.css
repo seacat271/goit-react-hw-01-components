@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .description {
@@ -52,6 +51,17 @@ margin-bottom: 12px;
     padding: 24px 0;
     background-color: rgb(213, 235, 243);
     border-top: 1px solid rgb(173, 178, 178);
+
+
+}
+.stats__item:hover .quantity,
+.stats__item:focus .quantity{
+        letter-spacing: 0.05em;
+}
+
+.stats__item:hover .label,
+.stats__item:focus .label{
+        letter-spacing: 0.05em;
 }
 
 .stats__item:not(:last-child) {
@@ -71,9 +81,11 @@ margin-bottom: 12px;
     margin-bottom: 10px;
     color: gray;
     font-weight: 500;
+    transition:  letter-spacing 300ms linear;
 }
 
 .quantity{
     font-size: 18px;
     font-weight: 700;
+    transition:  letter-spacing 300ms linear;
 }

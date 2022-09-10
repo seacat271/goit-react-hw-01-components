@@ -1,24 +1,25 @@
+import css from "./TransactionHistory.module.css";
+
 export default function TransactionHistory (props) {
-    return(<table class="transaction-history">
+  const {items} = props
+    return (<table className={css.transaction__history}>
     <thead>
-      <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+      <tr className={css.head}>
+        <th className={css.head__title}>Type</th>
+        <th className={css.head__title}>Amount</th>
+        <th className={css.head__title}>Currency</th>
       </tr>
     </thead>
   
     <tbody>
-      <tr>
-        <td>Invoice</td>
-        <td>125</td>
-        <td>USD</td>
+      {items.map(({id, type, amount, currency}) => (
+      <tr className={css.row} key = {id}>
+        <td className={css.type}>{type}</td>
+        <td>{amount}</td>
+        <td>{currency}</td>
       </tr>
-      <tr>
-        <td>Withdrawal</td>
-        <td>85</td>
-        <td>USD</td>
-      </tr>
+      ))}
+
     </tbody>
   </table>)
 }
