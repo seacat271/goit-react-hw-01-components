@@ -1,6 +1,5 @@
 .profile {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
     width: 300px;
     height: 400px;
     background-color: #ffffff;
@@ -9,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .description {
@@ -19,7 +19,6 @@
     object-fit: cover;
     width: 100px;
     border-radius: 50%;
-    display: block;
     margin-bottom: 24px;
     margin-left: auto;
     margin-right: auto;
