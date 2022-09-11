@@ -23,6 +23,7 @@ export const App = () => {
       >
         <StatList
         stats={data}
+        // color="red"
         />
       </Statistics>
       <FriendList
